@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Interface</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body data-user-image="{{ url_for('static', filename='user.jpg') }}" data-bot-image="{{ url_for('static', filename='chatbot.jpg') }}">
+    <div class="chat-container">
+        <h1>Chat with our Bot</h1>
+        <div class="chat-box" id="chat-box"></div>
+        <form id="chat-form">
+            <input type="text" id="user-input" name="user_input" placeholder="Type your message here..." required>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
